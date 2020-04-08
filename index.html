@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A simple human height converter between feet, inches and centimeters.">
+    <meta name="keywords", content="height converter, human height converter, feet and inches to centimeters, centimeters to feet and inches" />
+    <link href="bulmaswatch.min.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+    <title>Height Converter</title>
+  </head>
+  <body>
+    <section class="section has-text-centered">
+      <div class="container" style="max-width: 30rem;">
+        <h1 class="title is-2">Height Converter</h1>
+        <p class="subtitle">A simple human height converter between feet, inches and centimeters.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 30rem;">
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <label class="label" for="feet">Feet</label>
+              <div class="control">
+                <input
+                  id="feet"
+                  class="input"
+                  type="number"
+                  min="0"
+                  placeholder="0"
+                  onchange="convert(event)"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="inches">Inches</label>
+              <div class="control">
+                <input
+                  id="inches"
+                  class="input"
+                  type="number"
+                  min="0"
+                  max="11"
+                  placeholder="0"
+                  onchange="convert(event)"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="field">
+              <label class="label" for="centimeters">Centimeters</label>
+              <div class="control">
+                <input
+                  id="centimeters"
+                  class="input"
+                  type="number"
+                  min="0"
+                  placeholder="0"
+                  onchange="convert(event)"
+                />
+              </div>
+            </div>
+            <div class="field">
+              <label class="label" for="decimals">Decimals</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select id="decimals" onchange="convert(event)">
+                    <option value="0">0</option>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 30rem;">
+        <h4 class="title is-4">How to use</h4>
+        <p>Simply enter the height in the corresponding fields and the conversion will be done automatically.</p>
+        <p>This converter allows for imperial-to-metric and metric-to-imperial conversions.</p>
+        <p>The decimal selector allows the selection of the precision of the height values ​​to be displayed.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container" style="max-width: 30rem;">
+        <h4 class="title is-4">Why a height converter?</h4>
+        <p>This is an effort to help all people who, like me, have a hard time imagining a person's height using another measurement system.</p>
+      </div>
+    </section>
+
+    <footer class="footer is-primary">
+      <div class="content has-text-centered">
+        <p>
+          Made with ❤ by
+          <a href="https://github.com/isfalcantara">Isai Alcântara</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
