@@ -3,108 +3,111 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A simple human height converter between feet, inches and centimeters.">
-    <meta name="keywords", content="height converter, human height converter, feet and inches to centimeters, centimeters to feet and inches" />
-    <link href="bulmaswatch.min.css" rel="stylesheet" type="text/css" />
+    <meta
+      name="description"
+      content="A simple human height converter between feet, inches and centimeters."
+    />
+    <meta
+      name="keywords"
+      ,
+      content="height converter, human height converter, feet and inches to centimeters, centimeters to feet and inches"
+    />
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css"
+    />
     <script src="script.js"></script>
     <title>Height Converter</title>
   </head>
   <body>
-    <section class="section has-text-centered">
-      <div class="container" style="max-width: 30rem;">
-        <h1 class="title is-2">Height Converter</h1>
-        <p class="subtitle">A simple human height converter between feet, inches and centimeters.</p>
-      </div>
-    </section>
+    <header class="container" style="max-width: 50rem;">
+      <h1>Height Converter</h1>
+      <p>
+        A simple human height converter between feet, inches and centimeters.
+      </p>
+    </header>
 
-    <section class="section">
-      <div class="container" style="max-width: 30rem;">
-        <div class="columns">
-          <div class="column">
-            <div class="field">
-              <label class="label" for="feet">Feet</label>
-              <div class="control">
-                <input
-                  id="feet"
-                  class="input"
-                  type="number"
-                  min="0"
-                  placeholder="0"
-                  onchange="convert(event)"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label class="label" for="inches">Inches</label>
-              <div class="control">
-                <input
-                  id="inches"
-                  class="input"
-                  type="number"
-                  min="0"
-                  max="11"
-                  placeholder="0"
-                  onchange="convert(event)"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="column">
-            <div class="field">
-              <label class="label" for="centimeters">Centimeters</label>
-              <div class="control">
-                <input
-                  id="centimeters"
-                  class="input"
-                  type="number"
-                  min="0"
-                  placeholder="0"
-                  onchange="convert(event)"
-                />
-              </div>
-            </div>
-            <div class="field">
-              <label class="label" for="decimals">Decimals</label>
-              <div class="control">
-                <div class="select is-fullwidth">
-                  <select id="decimals" onchange="convert(event)">
-                    <option value="0">0</option>
-                    <option value="1" selected>1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section class="container" style="max-width: 50rem;">
+      <div class="row">
+        <div class="column">
+          <label for="feet">Feet</label>
+          <input
+            id="feet"
+            type="number"
+            min="0"
+            placeholder="0"
+            onchange="convert(event)"
+          />
+          <label for="inches">Inches</label>
+          <input
+            id="inches"
+            type="number"
+            min="0"
+            max="11"
+            placeholder="0"
+            onchange="convert(event)"
+          />
+        </div>
+        <div class="column">
+          <label for="centimeters">Centimeters</label>
+          <input
+            id="centimeters"
+            type="number"
+            min="0"
+            placeholder="0"
+            onchange="convert(event)"
+          />
+          <label for="decimals">Decimals</label>
+          <select id="decimals" onchange="convert(event)">
+            <option value="0" selected>0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container" style="max-width: 30rem;">
-        <h4 class="title is-4">How to use</h4>
-        <p>Simply enter the height in the corresponding fields and the conversion will be done automatically.</p>
-        <p>This converter allows for imperial-to-metric and metric-to-imperial conversions.</p>
-        <p>The decimal selector allows the selection of the precision of the height values ​​to be displayed.</p>
-      </div>
+    <section class="container" style="max-width: 50rem;">
+      <h4>How to use</h4>
+      <p>
+        Just enter the height in the corresponding fields and the conversion
+        will be done automatically.
+      </p>
+      <ul>
+        <li>
+          This converter allows for imperial-to-metric and metric-to-imperial
+          conversions.
+        </li>
+        <li>
+          Use the decimal drop-down to select a decimal precision for the
+          heights.
+        </li>
+      </ul>
     </section>
 
-    <section class="section">
-      <div class="container" style="max-width: 30rem;">
-        <h4 class="title is-4">Why a height converter?</h4>
-        <p>This is an effort to help all people who, like me, have a hard time imagining a person's height using another measurement system.</p>
-      </div>
+    <section class="container" style="max-width: 50rem;">
+      <h4>Why a height converter?</h4>
+      <p>
+        This is an effort to help all people who, like me, have a hard time
+        imagining a person's height using another measurement system.
+      </p>
     </section>
 
-    <footer class="footer is-primary">
-      <div class="content has-text-centered">
-        <p>
-          Made with ❤ by
-          <a href="https://github.com/isfalcantara">Isai Alcântara</a>
-        </p>
-      </div>
+    <footer class="container" style="max-width: 50rem;">
+      <p>
+        Made with ❤ by
+        <a href="https://www.linkedin.com/in/isfalcantara">Isai Alcântara</a>
+      </p>
     </footer>
   </body>
 </html>
