@@ -4,7 +4,7 @@ function convert(event) {
   var centimeters = document.getElementById("centimeters");
   var decimals = document.getElementById("decimals");
 
-  feet.value = Math.max(0, feet.value).toFixed(0);
+  feet.value = Math.trunc(Math.max(0, feet.value));
   inches.value = Math.max(0, inches.value);
   inches.value = Math.min(11, inches.value);
   centimeters.value = Math.max(0, centimeters.value);
